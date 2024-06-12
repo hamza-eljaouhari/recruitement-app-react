@@ -24,7 +24,7 @@ const AuthPage: React.FC<{ mode: 'login' | 'register' }> = ({ mode }) => {
             checked={isRecruiter}
             onChange={handleToggle}
             offColor="#888"
-            onColor="#4CAF50"
+            onColor="#000"
             checkedIcon={<i></i>}
             uncheckedIcon={<i></i>}
             className="m-2"

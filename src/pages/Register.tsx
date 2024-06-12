@@ -20,8 +20,8 @@ const Register: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center">
-      <form onSubmit={handleRegister} className="bg-white p-6 rounded shadow-md">
+    <div className="flex items-center justify-center">
+      <form onSubmit={handleRegister} className="p-6 rounded shadow-md">
         <h2 className="text-2xl mb-4">Register</h2>
         <div className="mb-4">
           <label className="block text-gray-700">Name</label>

@@ -7,7 +7,7 @@ const Header: React.FC = () => {
   const { isAuthenticated, logout } = useAuth();
 
   return (
-    <header className="bg-white shadow-md px-96 py-2 text-black border-b flex justify-between">
+    <header className="bg-white shadow-md px-96 py-2 text-black border-b flex justify-between  items-center">
       <div><img src={logo} alt="logo" width={64}></img></div>
       {!isAuthenticated ? (
         <div>
@@ -15,7 +15,7 @@ const Header: React.FC = () => {
           <Link to="/auth/register"  className="mr-4">Register</Link>
         </div>
       ): (
-        <div className="flex items-center">
+        <div>
           <Link to="/candidate/dashboard"  className="mr-4">Dashboard</Link>
           <button onClick={logout}>Logout</button>
         </div>

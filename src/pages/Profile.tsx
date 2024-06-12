@@ -43,7 +43,7 @@ const Profile: React.FC = () => {
         <div className="w-full bg-gray-100 h-2 rounded-full mb-4">
           <div className="bg-blue-300 h-2 rounded-full" style={{ width: `${progress}%` }}></div>
         </div>
-        <form onSubmit={handleSubmit} className="bg-white p-6 rounded shadow-md">
+        <form onSubmit={handleSubmit} className="p-6 rounded shadow-md">
           <h2 className="text-2xl mb-4">Profile</h2>
           <div className="mb-4">
             <label className="block text-gray-700">Name</label>
