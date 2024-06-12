@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/recruitement-app-react/static/css/main.01fba990.css",
+    "main.js": "/recruitement-app-react/static/js/main.4fca1ad1.js",
+    "static/media/logo.png": "/recruitement-app-react/static/media/logo.77868cf339bddfa4dc31.png",
+    "index.html": "/recruitement-app-react/index.html",
+    "main.01fba990.css.map": "/recruitement-app-react/static/css/main.01fba990.css.map",
+    "main.4fca1ad1.js.map": "/recruitement-app-react/static/js/main.4fca1ad1.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.01fba990.css",
+    "static/js/main.4fca1ad1.js"
+  ]
+}
