@@ -1,30 +1,23 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
+const logo = require('../assets/logo.png');
 
 const Header: React.FC = () => {
   const { isAuthenticated, logout } = useAuth();
 
   return (
-    <header className="bg-gray-800 px-96 py-4 text-white flex justify-between">
-      <nav>
-        <ul className="flex space-x-4">
-          <li><Link to="/">Home</Link></li>
-          {isAuthenticated && (
-            <>
-              <li><Link to="/candidate/dashboard">Dashboard</Link></li>
-            </>
-          )}
-        </ul>
-      </nav>
+    <header className="bg-white shadow-md px-96 py-2 text-black border-b flex justify-between">
+      <div><img src={logo} alt="logo" width={64}></img></div>
       {!isAuthenticated ? (
         <div>
           <Link to="/auth/login" className="mr-4">Login</Link>
-          <Link to="/auth/register">Register</Link>
+          <Link to="/auth/register"  className="mr-4">Register</Link>
         </div>
       ): (
-        <div>
-          <li><button onClick={logout}>Logout</button></li>
+        <div className="flex items-center">
+          <Link to="/candidate/dashboard"  className="mr-4">Dashboard</Link>
+          <button onClick={logout}>Logout</button>
         </div>
       )}
     </header>

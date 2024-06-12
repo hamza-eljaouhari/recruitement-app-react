@@ -40,8 +40,8 @@ const Profile: React.FC = () => {
   return (
     <div className="flex items-center justify-center">
       <div className="w-full max-w-md">
-        <div className="w-full bg-gray-200 h-2 rounded-full mb-4">
-          <div className="bg-blue-500 h-2 rounded-full" style={{ width: `${progress}%` }}></div>
+        <div className="w-full bg-gray-100 h-2 rounded-full mb-4">
+          <div className="bg-blue-300 h-2 rounded-full" style={{ width: `${progress}%` }}></div>
         </div>
         <form onSubmit={handleSubmit} className="bg-white p-6 rounded shadow-md">
           <h2 className="text-2xl mb-4">Profile</h2>
@@ -49,7 +49,7 @@ const Profile: React.FC = () => {
             <label className="block text-gray-700">Name</label>
             <input
               type="text"
-              className="mt-1 block w-full border-gray-300 rounded"
+              className="mt-1 block w-full border-1 border-gray-300 rounded"
               value={name}
               onChange={(e) => setName(e.target.value)}
             />
@@ -58,7 +58,7 @@ const Profile: React.FC = () => {
             <label className="block text-gray-700">Email</label>
             <input
               type="email"
-              className="mt-1 block w-full border-gray-300 rounded"
+              className="mt-1 block w-full border-1 border-gray-300 rounded"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
             />
@@ -66,7 +66,7 @@ const Profile: React.FC = () => {
           <div className="mb-4">
             <label className="block text-gray-700">Experience</label>
             <textarea
-              className="mt-1 block w-full border-gray-300 rounded"
+              className="mt-1 block w-full border-1 border-gray-300 rounded"
               value={experience}
               onChange={(e) => setExperience(e.target.value)}
             ></textarea>
@@ -74,7 +74,7 @@ const Profile: React.FC = () => {
           <div className="mb-4">
             <label className="block text-gray-700">Training</label>
             <textarea
-              className="mt-1 block w-full border-gray-300 rounded"
+              className="mt-1 block w-full border-1 border-gray-300 rounded"
               value={training}
               onChange={(e) => setTraining(e.target.value)}
             ></textarea>
@@ -83,12 +83,12 @@ const Profile: React.FC = () => {
             <label className="block text-gray-700">Skills</label>
             <input
               type="text"
-              className="mt-1 block w-full border-gray-300 rounded"
+              className="mt-1 block w-full border-1 border-gray-300 rounded"
               value={skills}
               onChange={(e) => setSkills(e.target.value)}
             />
           </div>
-          <button type="submit" className="bg-blue-500 text-white py-2 px-4 rounded">Save Profile</button>
+          <button type="submit" className="bg-blue-300 text-black py-2 px-4 rounded">Save Profile</button>
         </form>
       </div>
     </div>

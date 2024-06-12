@@ -27,7 +27,7 @@ const Register: React.FC = () => {
           <label className="block text-gray-700">Name</label>
           <input
             type="text"
-            className="mt-1 block w-full border-gray-300 rounded"
+            className="mt-1 block w-full border-1 border-gray-300 rounded"
             value={name}
             onChange={(e) => setName(e.target.value)}
           />
@@ -36,7 +36,7 @@ const Register: React.FC = () => {
           <label className="block text-gray-700">Email</label>
           <input
             type="email"
-            className="mt-1 block w-full border-gray-300 rounded"
+            className="mt-1 block w-full border-1 border-gray-300 rounded"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
           />
@@ -45,12 +45,12 @@ const Register: React.FC = () => {
           <label className="block text-gray-700">Password</label>
           <input
             type="password"
-            className="mt-1 block w-full border-gray-300 rounded"
+            className="mt-1 block w-full border-1 border-gray-300 rounded"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
           />
         </div>
-        <button type="submit" className="bg-blue-500 text-white py-2 px-4 rounded">Register</button>
+        <button type="submit" className="bg-blue-300 text-black py-2 px-4 rounded">Register</button>
       </form>
     </div>
   );
