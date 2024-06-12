@@ -13,7 +13,6 @@ const Register: React.FC = () => {
     try {
       const response = await axios.post('/auth/register', { name, email, password });
       // Handle the response if necessary
-      console.log(response.data);
       navigate('/login'); // Redirect to login page after successful registration
     } catch (error) {
       console.error('Error registering user:', error);
