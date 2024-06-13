@@ -10,13 +10,13 @@ const CandidateDashboard: React.FC = () => {
       <nav className="w-60 bg-gray-800 p-6">
         <ul>
           <li className="mb-4">
-            <Link to="/candidate/profile" className="text-black">Profile</Link>
+            <Link to="/candidate/profile" className="text-white font-bold">Profile</Link>
           </li>
           <li className="mb-4">
-            <Link to="/candidate/my-opportunities" className="text-black">My Opportunities</Link>
+            <Link to="/candidate/my-opportunities" className="text-white font-bold">My Opportunities</Link>
           </li>
           <li className="mb-4">
-            <Link to="/candidate/search-opportunities" className="text-black">Search Opportunities</Link>
+            <Link to="/candidate/search-opportunities" className="text-white font-bold">Search Opportunities</Link>
           </li>
         </ul>
       </nav>

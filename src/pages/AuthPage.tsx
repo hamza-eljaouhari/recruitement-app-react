@@ -37,12 +37,12 @@ const AuthPage: React.FC<AuthPageProps> = ({ mode }) => {
   };
 
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center bg-gray-900">
-      <div className="w-full max-w-md p-6 rounded shadow-md bg-gray-800">
-        <div className="w-full max-w-md mb-4 flex items-center justify-center">
+    <div className="min-h-screen flex flex-col items-center justify-center bg-gray-100">
+      <div className="w-full h-screen sm:h-auto sm:max-w-md p-6 rounded shadow-md bg-white mx-4 my-0 sm:my-8">
+        <div className="w-full mb-4 flex items-center justify-center">
           <button
             onClick={handleToggle}
-            className="bg-white text-gray-800 py-2 px-4 rounded"
+            className="bg-white text-gray-800 py-2 px-4 rounded border"
           >
             {isCandidate ? 'Switch to Recruiter' : 'Switch to Candidate'}
           </button>
