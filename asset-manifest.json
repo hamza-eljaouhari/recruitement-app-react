@@ -1,14 +1,15 @@
 {
   "files": {
-    "main.css": "/recruitement-app-react/static/css/main.ee30d8e5.css",
-    "main.js": "/recruitement-app-react/static/js/main.45ce1a8e.js",
+    "main.css": "/recruitement-app-react/static/css/main.7db2f9ed.css",
+    "main.js": "/recruitement-app-react/static/js/main.b8377d06.js",
+    "static/media/office.jpg": "/recruitement-app-react/static/media/office.e7dda426cd59f4400a36.jpg",
     "static/media/logo.png": "/recruitement-app-react/static/media/logo.77868cf339bddfa4dc31.png",
     "index.html": "/recruitement-app-react/index.html",
-    "main.ee30d8e5.css.map": "/recruitement-app-react/static/css/main.ee30d8e5.css.map",
-    "main.45ce1a8e.js.map": "/recruitement-app-react/static/js/main.45ce1a8e.js.map"
+    "main.7db2f9ed.css.map": "/recruitement-app-react/static/css/main.7db2f9ed.css.map",
+    "main.b8377d06.js.map": "/recruitement-app-react/static/js/main.b8377d06.js.map"
   },
   "entrypoints": [
-    "static/css/main.ee30d8e5.css",
-    "static/js/main.45ce1a8e.js"
+    "static/css/main.7db2f9ed.css",
+    "static/js/main.b8377d06.js"
   ]
 }
