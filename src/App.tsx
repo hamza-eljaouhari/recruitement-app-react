@@ -9,6 +9,7 @@ import PublicRoute from './components/PublicRoute';
 import Header from './components/Header';
 import { useAuth } from './context/AuthContext';
 import HomePage from './pages/HomePage';
+import './index.css';
 
 const App: React.FC = () => {
   const { login } = useAuth();
