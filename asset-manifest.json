@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/recruitement-app-react/static/css/main.7db2f9ed.css",
-    "main.js": "/recruitement-app-react/static/js/main.b8377d06.js",
+    "main.css": "/recruitement-app-react/static/css/main.064622c6.css",
+    "main.js": "/recruitement-app-react/static/js/main.959eb863.js",
     "static/media/office.jpg": "/recruitement-app-react/static/media/office.e7dda426cd59f4400a36.jpg",
     "static/media/logo.png": "/recruitement-app-react/static/media/logo.77868cf339bddfa4dc31.png",
     "index.html": "/recruitement-app-react/index.html",
-    "main.7db2f9ed.css.map": "/recruitement-app-react/static/css/main.7db2f9ed.css.map",
-    "main.b8377d06.js.map": "/recruitement-app-react/static/js/main.b8377d06.js.map"
+    "main.064622c6.css.map": "/recruitement-app-react/static/css/main.064622c6.css.map",
+    "main.959eb863.js.map": "/recruitement-app-react/static/js/main.959eb863.js.map"
   },
   "entrypoints": [
-    "static/css/main.7db2f9ed.css",
-    "static/js/main.b8377d06.js"
+    "static/css/main.064622c6.css",
+    "static/js/main.959eb863.js"
   ]
 }
