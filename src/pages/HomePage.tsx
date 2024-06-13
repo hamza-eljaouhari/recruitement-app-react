@@ -7,7 +7,7 @@ const HomePage: React.FC = () => {
     <div className="bg-gray-100">
       {/* First Section */}
       <section
-        className="h-[50rem] bg-cover bg-center flex items-center justify-center relative md:w-2/4 mx-auto"
+        className="h-[50rem] bg-cover bg-center flex items-center justify-center relative md:w-3/4 mx-auto"
         style={{ backgroundImage: `url(${backgroundImage})` }}
       >
         <div className="absolute inset-0 bg-black opacity-30"></div>
