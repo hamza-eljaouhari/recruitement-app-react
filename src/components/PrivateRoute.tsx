@@ -1,5 +1,5 @@
 import React from 'react';
-import { Navigate, RouteObject } from 'react-router-dom';
+import { Navigate } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
 
 interface PrivateRouteProps {
@@ -8,10 +8,9 @@ interface PrivateRouteProps {
 }
 
 const PrivateRoute: React.FC<PrivateRouteProps> = ({ role, element }) => {
-  const { isAuthenticated } = useAuth();
-  const userRole = localStorage.getItem('role');
+  const { isAuthenticated, userType } = useAuth();
 
-  if (!isAuthenticated || userRole !== role) {
+  if (!isAuthenticated || userType !== role) {
     return <Navigate to="/auth/login" />;
   }
 

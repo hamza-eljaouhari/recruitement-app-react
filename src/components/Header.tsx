@@ -12,7 +12,9 @@ const Header: React.FC = () => {
 
   return (
     <header className="bg-white shadow-md px-4 md:px-96 py-2 text-black border-b flex justify-between items-center">
-      <div><img src={logo} alt="logo" className="h-16" /></div>
+      <Link to="/">
+        <img src={logo} alt="logo" className="h-16" />
+      </Link>
       <div className="md:hidden">
         <button onClick={toggleMenu} className="text-2xl">
           {menuOpen ? <FaTimes /> : <FaBars />}
