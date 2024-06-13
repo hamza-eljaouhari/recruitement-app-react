@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import axios from '../services/api';
 import { useAuth } from '../context/AuthContext';
@@ -9,6 +9,15 @@ const LoginCandidate: React.FC = () => {
   const [password, setPassword] = useState('');
   const navigate = useNavigate();
   const { login } = useAuth();
+
+  useEffect(() => {
+    const urlParams = new URLSearchParams(window.location.search);
+    const token = urlParams.get('token');
+    if (token) {
+      login(token, 'candidate');
+      navigate('/candidate/dashboard');
+    }
+  }, [login, navigate]);
 
   const handleLogin = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -21,18 +30,34 @@ const LoginCandidate: React.FC = () => {
     }
   };
 
+  const handleGoogleLogin = () => {
+    window.location.href = 'http://localhost:3000/auth/google';
+  };
+
+  const handleLinkedInLogin = () => {
+    window.location.href = 'http://localhost:3000/auth/linkedin';
+  };
+
   return (
     <div className="flex items-center justify-center text-gray-800">
       <form onSubmit={handleLogin} className="p-8 rounded w-full max-w-md">
         <p className="text-2xl mb-6 text-center">Hey, welcome!</p>
         <div className="mb-4">
-          <button type="button" className="flex items-center justify-center w-full py-2 px-4 bg-white text-gray-800 rounded border-gray-600 border-2">
+          <button
+            type="button"
+            onClick={handleGoogleLogin}
+            className="flex items-center justify-center w-full py-2 px-4 bg-white text-gray-800 rounded border-gray-600 border-2"
+          >
             <FaGoogle className="mr-2" />
             Continue with Google
           </button>
         </div>
         <div className="mb-4">
-          <button type="button" className="flex items-center justify-center w-full py-2 px-4 bg-white text-gray-800 rounded border-gray-600 border-2">
+          <button
+            type="button"
+            onClick={handleLinkedInLogin}
+            className="flex items-center justify-center w-full py-2 px-4 bg-white text-gray-800 rounded border-gray-600 border-2"
+          >
             <FaLinkedin className="mr-2" />
             Continue with LinkedIn
           </button>

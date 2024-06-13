@@ -1,13 +1,13 @@
 import React from 'react';
-import { Navigate } from 'react-router-dom';
+import { Navigate, RouteObject } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
 
 interface PrivateRouteProps {
   role: 'candidate' | 'recruiter';
-  element: React.ComponentType<any>;
+  element: JSX.Element;
 }
 
-const PrivateRoute: React.FC<PrivateRouteProps> = ({ element: Component, role, ...rest }) => {
+const PrivateRoute: React.FC<PrivateRouteProps> = ({ role, element }) => {
   const { isAuthenticated } = useAuth();
   const userRole = localStorage.getItem('role');
 
@@ -15,7 +15,7 @@ const PrivateRoute: React.FC<PrivateRouteProps> = ({ element: Component, role, .
     return <Navigate to="/auth/login" />;
   }
 
-  return <Component {...rest} />;
+  return element;
 };
 
 export default PrivateRoute;

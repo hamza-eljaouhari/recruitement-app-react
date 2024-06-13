@@ -12,11 +12,20 @@ const RegisterRecruiter: React.FC = () => {
   const handleRegister = async (e: React.FormEvent) => {
     e.preventDefault();
     try {
-      await axios.post('/auth/register', { name, email, password, type: 'recruiter' });
+      const response = await axios.post('/auth/register/recruiter', { name, email, password });
+      // Handle successful registration
       navigate('/auth/login');
     } catch (error) {
       console.error('Error registering user:', error);
     }
+  };
+
+  const handleGoogleLogin = () => {
+    window.location.href = 'http://localhost:3000/auth/google';
+  };
+
+  const handleLinkedInLogin = () => {
+    window.location.href = 'http://localhost:3000/auth/linkedin';
   };
 
   return (
@@ -24,13 +33,21 @@ const RegisterRecruiter: React.FC = () => {
       <form onSubmit={handleRegister} className="p-8 rounded w-full max-w-md">
         <p className="text-2xl mb-6 text-center">Join us!</p>
         <div className="mb-4">
-          <button type="button" className="flex items-center justify-center w-full py-2 px-4 bg-white text-gray-800 rounded border-gray-600 border-2">
+          <button
+            type="button"
+            onClick={handleGoogleLogin}
+            className="flex items-center justify-center w-full py-2 px-4 bg-white text-gray-800 rounded border-gray-600 border-2"
+          >
             <FaGoogle className="mr-2" />
             Continue with Google
           </button>
         </div>
         <div className="mb-4">
-          <button type="button" className="flex items-center justify-center w-full py-2 px-4 bg-white text-gray-800 rounded border-gray-600 border-2">
+          <button
+            type="button"
+            onClick={handleLinkedInLogin}
+            className="flex items-center justify-center w-full py-2 px-4 bg-white text-gray-800 rounded border-gray-600 border-2"
+          >
             <FaLinkedin className="mr-2" />
             Continue with LinkedIn
           </button>
